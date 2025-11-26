@@ -37,7 +37,7 @@ namespace OOPDemo
     // Abstract class
     public abstract class Vehicle
     {
-        // Abstract methods: must be implemented by derived classes
+        // Abstract methods
         public abstract void StartEngine();
         public abstract void StopEngine();
 
@@ -48,4 +48,3 @@ namespace OOPDemo
         }
     }
 }
-
