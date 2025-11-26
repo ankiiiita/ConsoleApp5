@@ -83,21 +83,49 @@
 
 using System;
 
+//namespace OOPDemo
+//{
+//    class Program
+//    {
+//        static void Main(string[] args)
+//        {
+//            // Create a Printer object
+//            Printer printer = new Printer();
+
+//            // Call overloaded Print methods
+//            printer.Print("Hello, World!");   // Prints a string
+//            printer.Print(2025);              // Prints an integer
+//            printer.Print("Repeat this", 3);  // Prints the message 3 times
+//        }
+//    }
+//}
+
+
+
+using System;
+
 namespace OOPDemo
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // Create a Printer object
-            Printer printer = new Printer();
+            // Create NepaliTeacher object
+            NepaliTeacher nepaliTeacher = new NepaliTeacher { Name = "Ram" };
+            Console.WriteLine($"Teacher Name: {nepaliTeacher.Name}");
+            nepaliTeacher.Teaching();       // Overridden method
+            nepaliTeacher.SalaryInfo();     // Sealed method
 
-            // Call overloaded Print methods
-            printer.Print("Hello, World!");   // Prints a string
-            printer.Print(2025);              // Prints an integer
-            printer.Print("Repeat this", 3);  // Prints the message 3 times
+            Console.WriteLine();
+
+            // Create EnglishTeacher object
+            EnglishTeacher englishTeacher = new EnglishTeacher { Name = "Sita" };
+            Console.WriteLine($"Teacher Name: {englishTeacher.Name}");
+            englishTeacher.Teaching();      // Base class method
+            englishTeacher.SalaryInfo();    // Sealed method
         }
     }
 }
+
 
 
