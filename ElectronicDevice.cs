@@ -2,21 +2,20 @@
 
 namespace OOPDemo
 {
-    // Abstract class
     public abstract class ElectronicDevice
     {
         // Private fields
         private string brand;
         private double price;
 
-        // Constructor to initialize brand and price
+        // Constructor
         public ElectronicDevice(string brand, double price)
         {
-            this.brand = brand;
-            this.Price = price; // Use property to validate
+            this.Brand = brand;
+            this.Price = price;
         }
 
-        // Public properties (encapsulation)
+        // Properties (Encapsulation)
         public string Brand
         {
             get { return brand; }
@@ -41,7 +40,7 @@ namespace OOPDemo
             }
         }
 
-        // Abstract method: must be implemented by derived classes
+        // Abstract method
         public abstract void ShowInfo();
     }
 }

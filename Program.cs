@@ -101,6 +101,31 @@
 //}
 
 
+//using System;
+
+//namespace OOPDemo
+//{
+//    class Program
+//    {
+//        static void Main(string[] args)
+//        {
+//            // Create Car object
+//            Vehicle myCar = new Car();
+//            myCar.Display();
+//            myCar.StartEngine();
+//            myCar.StopEngine();
+
+//            Console.WriteLine();
+
+//            // Create Bike object
+//            Vehicle myBike = new Bike();
+//            myBike.Display();
+//            myBike.StartEngine();
+//            myBike.StopEngine();
+//        }
+//    }
+//}
+
 using System;
 
 namespace OOPDemo
@@ -109,22 +134,23 @@ namespace OOPDemo
     {
         static void Main(string[] args)
         {
-            // Create Car object
-            Vehicle myCar = new Car();
-            myCar.Display();
-            myCar.StartEngine();
-            myCar.StopEngine();
+            // Create store
+            ElectronicsStore store = new ElectronicsStore();
 
-            Console.WriteLine();
+            // Create devices
+            Laptop dellLaptop = new Laptop("Dell", 1500, "Intel i7");
+            Smartphone samsungPhone = new Smartphone("Samsung", 800, 24);
 
-            // Create Bike object
-            Vehicle myBike = new Bike();
-            myBike.Display();
-            myBike.StartEngine();
-            myBike.StopEngine();
+            // Add devices to store
+            store.AddDevice(dellLaptop);
+            store.AddDevice(samsungPhone);
+
+            // Display all device info and child-specific behavior
+            store.ShowAllDeviceDetails();
         }
     }
 }
+
 
 
 
