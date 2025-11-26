@@ -1,40 +1,40 @@
-﻿////using System;
+﻿//using System;
 
-////namespace BankApp
-////{
-////    class Program
-////    {
-////        static void Main(string[] args)
-////        {
-////            try
-////            {
-////                // Create a BankAccount object (Task 1)
-////                BankAccount myAccount = new BankAccount("ACC12345", 1000);
+//namespace BankApp
+//{
+//    class Program
+//    {
+//        static void Main(string[] args)
+//        {
+//            try
+//            {
+//                // Create a BankAccount object (Task 1)
+//                BankAccount myAccount = new BankAccount("ACC12345", 1000);
 
-////                // Display account number
-////                Console.WriteLine($"Account Number: {myAccount.AccountNumber}");
-////                Console.WriteLine($"Initial Balance: {myAccount.Balance:C}\n");
+//                // Display account number
+//                Console.WriteLine($"Account Number: {myAccount.AccountNumber}");
+//                Console.WriteLine($"Initial Balance: {myAccount.Balance:C}\n");
 
-////                // Deposit money (Task 2)
-////                myAccount.Deposit(500);    // Valid deposit
-////                myAccount.Deposit(-100);   // Invalid deposit
+//                // Deposit money (Task 2)
+//                myAccount.Deposit(500);    // Valid deposit
+//                myAccount.Deposit(-100);   // Invalid deposit
 
-////                Console.WriteLine();
+//                Console.WriteLine();
 
-////                // Withdraw money (Task 2)
-////                myAccount.Withdraw(300);   // Valid withdrawal
-////                myAccount.Withdraw(1500);  // Invalid withdrawal
-////                myAccount.Withdraw(-50);   // Invalid withdrawal
+//                // Withdraw money (Task 2)
+//                myAccount.Withdraw(300);   // Valid withdrawal
+//                myAccount.Withdraw(1500);  // Invalid withdrawal
+//                myAccount.Withdraw(-50);   // Invalid withdrawal
 
-////                Console.WriteLine($"\nFinal Balance: {myAccount.Balance:C}");
-////            }
-////            catch (ArgumentException ex)
-////            {
-////                Console.WriteLine($"Error: {ex.Message}");
-////            }
-////        }
-////    }
-////}
+//                Console.WriteLine($"\nFinal Balance: {myAccount.Balance:C}");
+//            }
+//            catch (ArgumentException ex)
+//            {
+//                Console.WriteLine($"Error: {ex.Message}");
+//            }
+//        }
+//    }
+//}
 
 
 
@@ -81,7 +81,7 @@
 //}
 
 
-using System;
+//using System;
 
 //namespace OOPDemo
 //{
@@ -101,7 +101,6 @@ using System;
 //}
 
 
-
 using System;
 
 namespace OOPDemo
@@ -110,22 +109,23 @@ namespace OOPDemo
     {
         static void Main(string[] args)
         {
-            // Create NepaliTeacher object
-            NepaliTeacher nepaliTeacher = new NepaliTeacher { Name = "Ram" };
-            Console.WriteLine($"Teacher Name: {nepaliTeacher.Name}");
-            nepaliTeacher.Teaching();       // Overridden method
-            nepaliTeacher.SalaryInfo();     // Sealed method
+            // Create Car object
+            Vehicle myCar = new Car();
+            myCar.Display();
+            myCar.StartEngine();
+            myCar.StopEngine();
 
             Console.WriteLine();
 
-            // Create EnglishTeacher object
-            EnglishTeacher englishTeacher = new EnglishTeacher { Name = "Sita" };
-            Console.WriteLine($"Teacher Name: {englishTeacher.Name}");
-            englishTeacher.Teaching();      // Base class method
-            englishTeacher.SalaryInfo();    // Sealed method
+            // Create Bike object
+            Vehicle myBike = new Bike();
+            myBike.Display();
+            myBike.StartEngine();
+            myBike.StopEngine();
         }
     }
 }
+
 
 
 

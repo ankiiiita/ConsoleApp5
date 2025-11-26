@@ -27,3 +27,25 @@
 //        }
 //    }
 //}
+
+
+
+using System;
+
+namespace OOPDemo
+{
+    // Abstract class
+    public abstract class Vehicle
+    {
+        // Abstract methods: must be implemented by derived classes
+        public abstract void StartEngine();
+        public abstract void StopEngine();
+
+        // Concrete method
+        public void Display()
+        {
+            Console.WriteLine("This is a vehicle");
+        }
+    }
+}
+
