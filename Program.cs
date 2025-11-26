@@ -1,34 +1,82 @@
-﻿using System;
+﻿//using System;
 
-namespace BankApp
+//namespace BankApp
+//{
+//    class Program
+//    {
+//        static void Main(string[] args)
+//        {
+//            try
+//            {
+//                // Create a BankAccount object (Task 1)
+//                BankAccount myAccount = new BankAccount("ACC12345", 1000);
+
+//                // Display account number
+//                Console.WriteLine($"Account Number: {myAccount.AccountNumber}");
+//                Console.WriteLine($"Initial Balance: {myAccount.Balance:C}\n");
+
+//                // Deposit money (Task 2)
+//                myAccount.Deposit(500);    // Valid deposit
+//                myAccount.Deposit(-100);   // Invalid deposit
+
+//                Console.WriteLine();
+
+//                // Withdraw money (Task 2)
+//                myAccount.Withdraw(300);   // Valid withdrawal
+//                myAccount.Withdraw(1500);  // Invalid withdrawal
+//                myAccount.Withdraw(-50);   // Invalid withdrawal
+
+//                Console.WriteLine($"\nFinal Balance: {myAccount.Balance:C}");
+//            }
+//            catch (ArgumentException ex)
+//            {
+//                Console.WriteLine($"Error: {ex.Message}");
+//            }
+//        }
+//    }
+//}
+
+
+
+
+
+
+
+using System;
+
+namespace VehicleApp
 {
     class Program
     {
         static void Main(string[] args)
         {
-            try
+            // Create Car object
+            Car myCar = new Car()
             {
-                // Create a BankAccount object (Task 1)
-                BankAccount myAccount = new BankAccount("ACC12345", 1000);
+                Brand = "Toyota",
+                Speed = 180,
+                Seats = 5
+            };
 
-                // Display account number
-                Console.WriteLine($"Account Number: {myAccount.AccountNumber}");
-                myAccount.Deposit(500);    // Valid deposit
-                myAccount.Deposit(-100);   // Invalid deposit
-
-                Console.WriteLine();
-
-                // Withdraw money (Task 2)
-                myAccount.Withdraw(300);   // Valid withdrawal
-                myAccount.Withdraw(1500);  // Invalid withdrawal
-                myAccount.Withdraw(-50);   // Invalid withdrawal
-
-                Console.WriteLine($"\nFinal Balance: {myAccount.Balance:C}");
-            }
-            catch (ArgumentException ex)
+            // Create Motorcycle object
+            Motorcycle myMotorcycle = new Motorcycle()
             {
-                Console.WriteLine($"Error: {ex.Message}");
-            }
+                Brand = "Honda",
+                Speed = 120,
+                HasCarrier = true
+            };
+
+            // Demonstrate base class methods
+            myCar.Start();
+            myCar.DisplayInfo();
+            myCar.Stop();
+
+            Console.WriteLine();
+
+            myMotorcycle.Start();
+            myMotorcycle.DisplayInfo();
+            myMotorcycle.Stop();
         }
     }
 }
+
